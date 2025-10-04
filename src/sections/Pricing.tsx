@@ -86,24 +86,24 @@ function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Price Plans</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Price Plans</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Choose the perfect plan for your project needs. All plans include high-quality development and ongoing support.
           </p>
         </div>
 
         {/* Billing Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white p-1 rounded-lg shadow-sm">
+          <div className="bg-gray-700 p-1 rounded-lg shadow-sm">
             <button
               onClick={() => setBillingCycle('monthly')}
               className={`px-6 py-2 rounded-md font-medium transition-colors ${
                 billingCycle === 'monthly'
                   ? 'bg-blue-600 text-white'
-                  : 'text-gray-700 hover:text-blue-600'
+                  : 'text-gray-300 hover:text-blue-400'
               }`}
             >
               Monthly
@@ -113,7 +113,7 @@ function Pricing() {
               className={`px-6 py-2 rounded-md font-medium transition-colors ${
                 billingCycle === 'yearly'
                   ? 'bg-blue-600 text-white'
-                  : 'text-gray-700 hover:text-blue-600'
+                  : 'text-gray-300 hover:text-blue-400'
               }`}
             >
               Yearly (Save 20%)
@@ -126,7 +126,7 @@ function Pricing() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-lg shadow-lg p-8 relative ${
+              className={`bg-gray-700 rounded-lg shadow-lg p-8 relative ${
                 plan.popular ? 'ring-2 ring-blue-600 transform scale-105' : ''
               }`}
             >
@@ -139,13 +139,13 @@ function Pricing() {
               )}
               
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <p className="text-gray-300 mb-4">{plan.description}</p>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-white">
                     ${billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
                   </span>
-                  <span className="text-gray-600 ml-2">
+                  <span className="text-gray-300 ml-2">
                     /{billingCycle === 'monthly' ? 'project' : 'year'}
                   </span>
                 </div>
@@ -157,7 +157,7 @@ function Pricing() {
                     <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -166,7 +166,7 @@ function Pricing() {
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular
                     ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    : 'bg-gray-600 text-white hover:bg-gray-500'
                 }`}
               >
                 {plan.cta}

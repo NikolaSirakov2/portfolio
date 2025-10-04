@@ -72,11 +72,11 @@ function Portfolio() {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Portfolio</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore my recent projects and see how I've helped businesses achieve their digital goals
           </p>
         </div>
@@ -90,7 +90,7 @@ function Portfolio() {
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 activeFilter === category.id
                   ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
             >
               {category.name}
@@ -101,20 +101,20 @@ function Portfolio() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={project.id} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">Project Image</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-300 mb-4">{project.description}</p>
                 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                      className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -126,7 +126,7 @@ function Portfolio() {
                   <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
                     View Project
                   </button>
-                  <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <button className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                       <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
@@ -140,8 +140,8 @@ function Portfolio() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h3>
-          <p className="text-gray-600 mb-8">Let's discuss how I can help bring your ideas to life</p>
+          <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
+          <p className="text-gray-300 mb-8">Let's discuss how I can help bring your ideas to life</p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             Get In Touch
           </button>

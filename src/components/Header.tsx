@@ -8,38 +8,38 @@ function Header() {
   }
 
   return (
-    <header className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <header className="bg-gray-900 shadow-lg fixed w-full top-0 z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">Portfolio</h1>
+            <h1 className="text-2xl font-bold text-white">Portfolio</h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Home
             </a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               About
             </a>
-            <a href="#clients" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#clients" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Clients
             </a>
-            <a href="#portfolio" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#portfolio" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Portfolio
             </a>
-            <a href="#process" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#process" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Process
             </a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#pricing" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Pricing
             </a>
-            <a href="#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#faq" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               FAQ
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
               Contact
             </a>
           </nav>
@@ -48,7 +48,7 @@ function Header() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -65,29 +65,29 @@ function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 border-t border-gray-700">
+              <a href="#home" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Home
               </a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#about" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 About
               </a>
-              <a href="#clients" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#clients" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Clients
               </a>
-              <a href="#portfolio" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#portfolio" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Portfolio
               </a>
-              <a href="#process" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#process" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Process
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#pricing" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Pricing
               </a>
-              <a href="#faq" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 FAQ
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+              <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Contact
               </a>
             </div>

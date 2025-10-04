@@ -22,28 +22,28 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Home
             </a>
-            <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               About
             </a>
-            <a href="#clients" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#clients" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Clients
             </a>
-            <a href="#portfolio" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#portfolio" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Portfolio
             </a>
-            <a href="#process" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#process" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Process
             </a>
-            <a href="#pricing" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#pricing" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Pricing
             </a>
-            <a href="#faq" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#faq" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               FAQ
             </a>
-            <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+            <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 font-['Inter',sans-serif]">
               Contact
             </a>
           </nav>
@@ -70,28 +70,28 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 border-t border-gray-700">
-              <a href="#home" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#home" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Home
               </a>
-              <a href="#about" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#about" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 About
               </a>
-              <a href="#clients" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#clients" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Clients
               </a>
-              <a href="#portfolio" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#portfolio" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Portfolio
               </a>
-              <a href="#process" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#process" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Process
               </a>
-              <a href="#pricing" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#pricing" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Pricing
               </a>
-              <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 FAQ
               </a>
-              <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+              <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Contact
               </a>
             </div>

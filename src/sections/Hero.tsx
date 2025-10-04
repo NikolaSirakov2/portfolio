@@ -6,6 +6,24 @@ const words = [
   "AI Models",
 ]
 
+const advantages = [
+  {
+    icon: "▶",
+    title: "End-to-End Service",
+    description: "From idea to launch, I handle everything—design, development, hosting setup, and optimizations."
+  },
+  {
+    icon: "▶",
+    title: "Personal Approach",
+    description: "You work directly with me, so communication is clear, fast, and tailored to your project."
+  },
+  {
+    icon: "▶",
+    title: "AI Integration",
+    description: "Beyond websites, I can automate workflows and build AI agents to save time and boost efficiency."
+  }
+]
+
 function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
 
@@ -24,28 +42,53 @@ function Hero() {
           <div className="order-2 lg:order-1">
             <div className="flex flex-col gap-7">
               <div className="hero-text">
-                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
                   Shaping <span className="text-blue-400">{words[currentWordIndex]}</span>
                 </h1>
-                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
                   into Real Projects
                 </h1>
-                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
                   that Deliver Results
                 </h1>
+              </div>
+              
+              {/* Advantages */}
+              <div className="mt-4 space-y-4 max-w-md">
+                {advantages.map((advantage, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="text-green-400 text-xl flex-shrink-0 mt-1 font-bold">
+                      {advantage.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-white text-lg mb-1">
+                        {advantage.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        {advantage.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Contact Me Button */}
+              <div className="mt-6 ml-4">
+                <button className="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 cursor-pointer">
+                  Contact Me
+                </button>
               </div>
             </div>
           </div>
 
           {/* Image */}
           <div className="order-1 lg:order-2">
-            <div className="relative">
+            <div className="relative pt-8">
               <img
                 src="/nik_working_on desk.png"
                 alt="Nikol working on desk"
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="w-full h-auto rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent rounded-lg"></div>
             </div>
           </div>
         </div>

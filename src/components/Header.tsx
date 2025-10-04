@@ -13,7 +13,11 @@ function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white">Portfolio</h1>
+            <img 
+              src="/nik-websites_logo.png" 
+              alt="Nikol Websites Logo" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

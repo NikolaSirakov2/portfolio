@@ -1,42 +1,38 @@
+import { useState, useEffect } from 'react'
+
+const words = [
+  "Designs",
+  "Concepts",
+  "AI Models",
+]
 
 function Hero() {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length)
+    }, 2000) // Change word every 2 seconds
+
+    return () => clearInterval(interval)
+  }, [])
   return (
     <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-              Hi, I'm <span className="text-blue-400">Nikol</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              A passionate developer and designer creating exceptional digital experiences. 
-              I specialize in modern web technologies and mobile applications that make a real difference.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                View My Work
-              </button>
-              <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400/10 transition-colors">
-                Get In Touch
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">50+</div>
-                <p className="text-gray-400 text-sm">Projects</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">30+</div>
-                <p className="text-gray-400 text-sm">Clients</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">5+</div>
-                <p className="text-gray-400 text-sm">Years</p>
+            <div className="flex flex-col gap-7">
+              <div className="hero-text">
+                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Shaping <span className="text-blue-400">{words[currentWordIndex]}</span>
+                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  into Real Projects
+                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  that Deliver Results
+                </h1>
               </div>
             </div>
           </div>

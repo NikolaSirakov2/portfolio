@@ -2,15 +2,13 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
-import NumberFlow from "@number-flow/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const plans = [
   {
     name: "Starter",
     description:
       "Perfect for small projects and MVPs looking to get started with web development",
-    price: 2500,
     yearlyPrice: 25000,
     buttonText: "Contact Me",
     buttonVariant: "outline" as const,
@@ -29,7 +27,6 @@ const plans = [
     name: "Professional",
     description:
       "Best value for growing businesses that need more advanced features",
-    price: 5000,
     yearlyPrice: 50000,
     buttonText: "Contact Me",
     buttonVariant: "default" as const,
@@ -48,10 +45,9 @@ const plans = [
     ],
   },
   {
-    name: "Enterprise",
+    name: "Premium",
     description:
-      "Advanced plan with enhanced features and unlimited access for large-scale applications",
-    price: 10000,
+      "Comprehensive plan with advanced features for complex projects and businesses",
     yearlyPrice: 100000,
     buttonText: "Contact Me",
     buttonVariant: "outline" as const,
@@ -73,7 +69,6 @@ const plans = [
 
 
 export default function PricingSection6() {
-  const [isYearly] = useState(false);
   const pricingRef = useRef<HTMLDivElement>(null);
 
   const revealVariants = {
@@ -131,48 +126,21 @@ export default function PricingSection6() {
             customVariants={revealVariants}
           >
             <Card
-              className={`relative text-white border-neutral-800 ${
+              className={`relative text-white border-neutral-800 flex flex-col h-full ${
                 plan.popular
                   ? "bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 shadow-[0px_-13px_300px_0px_#0900ff] z-20"
                   : "bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 z-10"
               }`}
             >
-              <CardHeader className="text-left ">
+              <CardHeader className="text-left flex-grow">
                 <div className="flex justify-between">
                   <h3 className="text-3xl mb-2">{plan.name}</h3>
                 </div>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-semibold ">
-                    $
-                    <NumberFlow
-                      format={{
-                        currency: "USD",
-                      }}
-                      value={isYearly ? plan.yearlyPrice : plan.price}
-                      className="text-4xl font-semibold"
-                    />
-                  </span>
-                  <span className="text-gray-300 ml-1">
-                    /{isYearly ? "year" : "project"}
-                  </span>
-                </div>
-                <p className="text-sm text-gray-300 mb-4">{plan.description}</p>
+                <p className="text-sm text-gray-300 mb-4 flex-grow">{plan.description}</p>
               </CardHeader>
 
-              <CardContent className="pt-0">
-                <button
-                  className={`w-full mb-6 p-4 text-xl rounded-xl ${
-                    plan.popular
-                      ? "bg-gradient-to-t from-blue-500 to-blue-600  shadow-lg shadow-blue-800 border border-blue-500 text-white"
-                      : plan.buttonVariant === "outline"
-                        ? "bg-gradient-to-t from-neutral-950 to-neutral-600  shadow-lg shadow-neutral-900 border border-neutral-800 text-white"
-                        : ""
-                  }`}
-                >
-                  {plan.buttonText}
-                </button>
-
-                <div className="space-y-3 pt-4 border-t border-neutral-700">
+              <CardContent className="pt-0 flex flex-col h-full">
+                <div className="space-y-3 pt-4 border-t border-neutral-700 flex-grow">
                   <h4 className="font-medium text-base mb-3">
                     {plan.includes[0]}
                   </h4>
@@ -187,6 +155,14 @@ export default function PricingSection6() {
                       </li>
                     ))}
                   </ul>
+                </div>
+                
+                <div className="mt-8 flex-shrink-0">
+                  <button
+                    className="w-full p-4 text-xl rounded-xl bg-gradient-to-t from-blue-500 to-blue-600 shadow-lg shadow-blue-800 border border-blue-500 text-white hover:from-blue-600 hover:to-blue-700 transition-all"
+                  >
+                    {plan.buttonText}
+                  </button>
                 </div>
               </CardContent>
             </Card>

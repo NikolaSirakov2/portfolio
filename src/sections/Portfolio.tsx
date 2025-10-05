@@ -98,13 +98,13 @@ function Portfolio() {
               animationNum={2 + index}
               timelineRef={portfolioRef}
             >
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-700/50">
+              <div className="bg-gray-800/60 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-700/50 flex flex-col h-full">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                   <span className="text-white text-lg font-semibold">Project Image</span>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-300 mb-4 flex-grow">{project.description}</p>
                   
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -119,7 +119,7 @@ function Portfolio() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
                       View Project
                     </button>

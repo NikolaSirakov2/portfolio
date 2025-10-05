@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function Pricing() {
   const [billingCycle, setBillingCycle] = useState('monthly')

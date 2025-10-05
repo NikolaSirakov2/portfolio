@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([])

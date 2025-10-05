@@ -19,7 +19,7 @@ function Pricing() {
         "30 days support"
       ],
       popular: false,
-      cta: "Get Started"
+      cta: "Contact Me"
     },
     {
       name: "Professional",
@@ -37,8 +37,8 @@ function Pricing() {
         "90 days support",
         "Analytics setup"
       ],
-      popular: true,
-      cta: "Most Popular"
+      popular: false,
+      cta: "Contact Me"
     },
     {
       name: "Enterprise",
@@ -58,7 +58,7 @@ function Pricing() {
         "Team training"
       ],
       popular: false,
-      cta: "Contact Us"
+      cta: "Contact Me"
     }
   ]
 
@@ -89,36 +89,7 @@ function Pricing() {
     <section id="pricing" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Price Plans</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose the perfect plan for your project needs. All plans include high-quality development and ongoing support.
-          </p>
-        </div>
-
-        {/* Billing Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-gray-700 p-1 rounded-lg shadow-sm">
-            <button
-              onClick={() => setBillingCycle('monthly')}
-              className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                billingCycle === 'monthly'
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-300 hover:text-blue-400'
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingCycle('yearly')}
-              className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                billingCycle === 'yearly'
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-300 hover:text-blue-400'
-              }`}
-            >
-              Yearly (Save 20%)
-            </button>
-          </div>
+          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Price Packages</h2>
         </div>
 
         {/* Pricing Cards */}
@@ -130,13 +101,6 @@ function Pricing() {
                 plan.popular ? 'ring-2 ring-blue-600 transform scale-105' : ''
               }`}
             >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
-                  </span>
-                </div>
-              )}
               
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -163,11 +127,7 @@ function Pricing() {
               </ul>
 
               <button
-                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-600 text-white hover:bg-gray-500'
-                }`}
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors bg-blue-500 text-white hover:bg-blue-700 hover:mouse-pointer`}
               >
                 {plan.cta}
               </button>

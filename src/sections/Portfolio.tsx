@@ -81,23 +81,6 @@ function Portfolio() {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                activeFilter === category.id
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
@@ -136,15 +119,6 @@ function Portfolio() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-          <p className="text-gray-300 mb-8">Let's discuss how I can help bring your ideas to life</p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Get In Touch
-          </button>
         </div>
       </div>
     </section>

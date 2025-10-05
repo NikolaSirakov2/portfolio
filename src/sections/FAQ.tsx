@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { SectionAnimation, AnimatedElement } from '@/components/ui/section-animation'
 
 function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([])
+  const faqRef = useRef<HTMLDivElement>(null!)
 
   const faqs = [
     {
@@ -58,44 +60,57 @@ function FAQ() {
     <section id="faq" className="min-h-screen mx-auto relative overflow-x-hidden">
       {/* Blue glow effect to match pricing cards */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-32 bg-gradient-to-t from-blue-500/20 to-transparent blur-3xl"></div>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-blue-300 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Frequently Asked Questions</h2>
+      <SectionAnimation 
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-6 relative z-10"
+        useVerticalCut={true}
+        verticalCutText="Frequently Asked Questions"
+      >
+        <AnimatedElement
+          animationNum={1}
+          timelineRef={faqRef}
+          className="text-center mb-16"
+        >
           <p className="text-xl text-gray-300">
             Find answers to common questions about my services and development process
           </p>
-        </div>
+        </AnimatedElement>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div ref={faqRef} className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-gray-800/60 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-700/50">
-              <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/50 transition-colors"
-              >
-                <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                <svg
-                  className={`w-5 h-5 text-gray-500 transform transition-transform ${
-                    openItems.includes(index) ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            <AnimatedElement
+              key={index}
+              animationNum={2 + index}
+              timelineRef={faqRef}
+            >
+              <div className="bg-gray-800/60 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-700/50">
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/50 transition-colors"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {openItems.includes(index) && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+                  <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                  <svg
+                    className={`w-5 h-5 text-gray-500 transform transition-transform ${
+                      openItems.includes(index) ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {openItems.includes(index) && (
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            </AnimatedElement>
           ))}
         </div>
-      </div>
+      </SectionAnimation>
     </section>
   )
 }

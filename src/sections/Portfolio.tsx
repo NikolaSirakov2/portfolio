@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function Portfolio() {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [activeFilter] = useState('all')
 
   const projects = [
     {
@@ -60,12 +60,12 @@ function Portfolio() {
     }
   ]
 
-  const categories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Applications' },
-    { id: 'mobile', name: 'Mobile Apps' },
-    { id: 'iot', name: 'IoT Solutions' }
-  ]
+  // const categories = [
+  //   { id: 'all', name: 'All Projects' },
+  //   { id: 'web', name: 'Web Applications' },
+  //   { id: 'mobile', name: 'Mobile Apps' },
+  //   { id: 'iot', name: 'IoT Solutions' }
+  // ]
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 

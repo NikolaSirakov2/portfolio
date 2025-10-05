@@ -14,7 +14,7 @@ function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/nik-websites_logo.png" 
+              src="/logo.png" 
               alt="Nikol Websites Logo" 
               className="h-10 w-auto"
             />

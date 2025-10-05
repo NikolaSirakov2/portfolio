@@ -154,13 +154,13 @@ export default function PricingSection6() {
     >
 
       <article className="text-center mb-6 pt-32 max-w-3xl mx-auto space-y-2 relative z-50">
-        <h2 className="text-4xl font-medium text-white">
+        <h2 className="text-5xl font-black text-blue-300 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">
           <VerticalCutReveal
             splitBy="words"
             staggerDuration={0.15}
             staggerFrom="first"
             reverse={true}
-            containerClassName="justify-center "
+            containerClassName="justify-center"
             transition={{
               type: "spring",
               stiffness: 250,
@@ -168,19 +168,9 @@ export default function PricingSection6() {
               delay: 0, // First element
             }}
           >
-            Plans that work best for your business
+            PRICE PACKAGES
           </VerticalCutReveal>
         </h2>
-
-        <TimelineContent
-          as="p"
-          animationNum={0}
-          timelineRef={pricingRef}
-          customVariants={revealVariants}
-          className="text-gray-300"
-        >
-          Trusted by businesses worldwide. I help teams create amazing web experiences. Explore which option is right for you.
-        </TimelineContent>
       </article>
 
 

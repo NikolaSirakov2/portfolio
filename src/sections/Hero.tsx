@@ -42,13 +42,13 @@ function Hero() {
           <div className="order-2 lg:order-1">
             <div className="flex flex-col gap-7">
               <div className="hero-text">
-                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">
                   Shaping <span className="text-blue-400">{words[currentWordIndex]}</span>
                 </h1>
-                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">
                   into Real Projects
                 </h1>
-                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">
                   that Deliver Results
                 </h1>
               </div>

@@ -55,7 +55,7 @@ function WorkingProcess() {
     <section id="process" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Working Process</h2>
+          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">Working Process</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             My proven methodology ensures successful project delivery from concept to launch
           </p>

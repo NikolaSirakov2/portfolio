@@ -8,51 +8,33 @@ function WorkingProcess() {
   const steps = [
     {
       number: "01",
-      title: "Discovery & Planning",
+      title: "Discovery Call",
       description: "We start by understanding your business goals, target audience, and project requirements through detailed discussions and research.",
-      icon: "🔍",
-      details: [
-        "Initial consultation and requirements gathering",
-        "Market research and competitor analysis",
-        "Project scope definition and timeline planning",
-        "Technology stack selection and architecture planning"
-      ]
+      icon: "🔍"
     },
     {
       number: "02",
-      title: "Design & Prototyping",
-      description: "Creating user-centered designs and interactive prototypes to visualize the final product before development begins.",
-      icon: "🎨",
-      details: [
-        "User experience (UX) research and design",
-        "Wireframing and user flow mapping",
-        "Visual design and branding integration",
-        "Interactive prototyping and user testing"
-      ]
+      title: "Planning & Proposal",
+      description: "Creating a comprehensive project plan and detailed proposal that outlines the roadmap to success.",
+      icon: "📋"
     },
     {
       number: "03",
-      title: "Development & Testing",
+      title: "Design & Development",
       description: "Building your application with clean, scalable code while maintaining high quality through continuous testing.",
-      icon: "⚙️",
-      details: [
-        "Agile development with regular milestones",
-        "Code reviews and quality assurance",
-        "Automated testing and bug fixing",
-        "Performance optimization and security implementation"
-      ]
+      icon: "⚙️"
     },
     {
       number: "04",
-      title: "Deployment & Launch",
+      title: "Review & Feedback",
+      description: "Collaborative review process to ensure the solution meets your expectations and requirements.",
+      icon: "👥"
+    },
+    {
+      number: "05",
+      title: "Launch & Support",
       description: "Smooth deployment to production with comprehensive monitoring and support to ensure everything runs perfectly.",
-      icon: "🚀",
-      details: [
-        "Production deployment and configuration",
-        "Performance monitoring and analytics setup",
-        "User training and documentation",
-        "Post-launch support and maintenance planning"
-      ]
+      icon: "🚀"
     }
   ]
 
@@ -61,7 +43,7 @@ function WorkingProcess() {
       <SectionAnimation 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         useVerticalCut={true}
-        verticalCutText="Working Process"
+        verticalCutText="How We'll Work Together"
       >
         <AnimatedElement
           animationNum={1}
@@ -69,56 +51,43 @@ function WorkingProcess() {
           className="text-center mb-16"
         >
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            My proven methodology ensures successful project delivery from concept to launch
+            My process is designed to save you time, ensure clear communication, and deliver solutions that truly work.
           </p>
         </AnimatedElement>
 
         {/* Process Steps */}
-        <div ref={processRef} className="space-y-12">
+        <div ref={processRef} className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
           {steps.map((step, index) => (
             <AnimatedElement
               key={index}
               animationNum={2 + index}
               timelineRef={processRef}
+              className="flex-1 max-w-xs"
             >
-              <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="text-center">
                 {/* Step Number and Icon */}
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                      {step.number}
-                    </div>
-                    <div className="absolute -top-2 -right-2 text-4xl">
-                      {step.icon}
-                    </div>
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto">
+                    {step.number}
+                  </div>
+                  <div className="absolute -top-2 -right-2 text-3xl">
+                    {step.icon}
                   </div>
                 </div>
 
                 {/* Step Content */}
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-lg text-gray-300 mb-6">{step.description}</p>
-                  
-                  {/* Step Details */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {step.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-300">{detail}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Arrow (except for last step) */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block flex-shrink-0">
-                    <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                )}
+                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{step.description}</p>
               </div>
+
+              {/* Arrow (except for last step) */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              )}
             </AnimatedElement>
           ))}
         </div>

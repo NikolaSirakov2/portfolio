@@ -56,7 +56,7 @@ function WorkingProcess() {
         </AnimatedElement>
 
         {/* Process Steps */}
-        <div ref={processRef} className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div ref={processRef} className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <AnimatedElement
               key={index}

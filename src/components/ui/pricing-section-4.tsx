@@ -181,15 +181,6 @@ export default function PricingSection6() {
         >
           Trusted by businesses worldwide. I help teams create amazing web experiences. Explore which option is right for you.
         </TimelineContent>
-
-        <TimelineContent
-          as="div"
-          animationNum={1}
-          timelineRef={pricingRef}
-          customVariants={revealVariants}
-        >
-          <PricingSwitch onSwitch={togglePricingPeriod} />
-        </TimelineContent>
       </article>
 
 

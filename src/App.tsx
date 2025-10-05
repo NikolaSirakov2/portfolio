@@ -4,6 +4,7 @@ import About from "./sections/About"
 import Portfolio from "./sections/Portfolio"
 import WorkingProcess from "./sections/WorkingProcess"
 import Pricing from "./sections/Pricing"
+import Reviews from "./sections/Reviews"
 import FAQ from "./sections/FAQ"
 import Footer from "./components/Footer"
 import { Sparkles } from "./components/ui/sparkles"
@@ -47,6 +48,7 @@ const App = () => {
         <Portfolio />
         <WorkingProcess />
         <Pricing />
+        <Reviews />
         <FAQ />
         <Footer />
       </div>

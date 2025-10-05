@@ -12,9 +12,9 @@ function About() {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img
-                src="/nik_working_on desk.png"
+                src="/presentation.png"
                 alt="Working on desk"
-                className="w-3/4 max-w-md h-auto rounded-lg shadow-xl mx-auto"
+                className="w-3/4 max-w-md h-auto rounded-lg shadow-2xl mx-auto shadow-blue-500/30 drop-shadow-[0_0_30px_rgba(59,130,246,0.1)]"
               />
             </div>
           </div>
@@ -26,9 +26,6 @@ function About() {
             </p>
             <p className="text-lg text-gray-300 mb-6">
               Over the years, I've worked on <strong className="text-white">20+ projects</strong>, collaborating with both <strong className="text-white">individual founders</strong> and <strong className="text-white">corporate teams</strong>.
-            </p>
-            <p className="text-lg text-gray-300 mb-6">
-              I also gained experience in <strong className="text-white">corporate environments</strong>, which taught me to work efficiently, strategically, and with a strong focus on <strong className="text-white">results</strong>.
             </p>
             <p className="text-lg text-gray-300 mb-8">
               I believe in building solutions that drive real growth, maintaining clear communication, and creating long-term success for my clients.

@@ -72,7 +72,7 @@ function Portfolio() {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-800">
+    <section id="portfolio" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Portfolio</h2>
@@ -84,7 +84,7 @@ function Portfolio() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={project.id} className="bg-gray-800/60 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-700/50">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">Project Image</span>
               </div>

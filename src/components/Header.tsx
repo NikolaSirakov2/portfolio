@@ -8,7 +8,7 @@ function Header() {
   }
 
   return (
-    <header className="bg-gray-900 shadow-lg fixed w-full top-0 z-50 border-b border-gray-800">
+    <header className="bg-black/80 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -69,7 +69,7 @@ function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 border-t border-gray-700">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md border-t border-gray-700/50">
               <a href="#home" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-semibold tracking-wide transition-all duration-300 font-['Inter',sans-serif]">
                 Home
               </a>

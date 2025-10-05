@@ -55,7 +55,7 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-20 bg-gray-900">
+    <section id="faq" className="py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Frequently Asked Questions</h2>
@@ -67,10 +67,10 @@ function FAQ() {
         {/* FAQ Items */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden">
+            <div key={index} className="bg-gray-800/60 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-700/50">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                 <svg

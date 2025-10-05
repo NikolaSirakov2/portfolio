@@ -1,13 +1,16 @@
+import { Suspense, lazy } from "react"
 import Header from "./components/Header"
 import Hero from "./sections/Hero"
-import About from "./sections/About"
-import Portfolio from "./sections/Portfolio"
-import WorkingProcess from "./sections/WorkingProcess"
-import Pricing from "./sections/Pricing"
-import Reviews from "./sections/Reviews"
-import FAQ from "./sections/FAQ"
 import Footer from "./components/Footer"
 import { Sparkles } from "./components/ui/sparkles"
+
+// Lazy load sections for better performance
+const About = lazy(() => import("./sections/About"))
+const Portfolio = lazy(() => import("./sections/Portfolio"))
+const WorkingProcess = lazy(() => import("./sections/WorkingProcess"))
+const Pricing = lazy(() => import("./sections/Pricing"))
+const Reviews = lazy(() => import("./sections/Reviews"))
+const FAQ = lazy(() => import("./sections/FAQ"))
 
 const App = () => {
   return (
@@ -44,12 +47,24 @@ const App = () => {
       <div className="relative z-10">
         <Header />
         <Hero />
-        <About />
-        <Portfolio />
-        <WorkingProcess />
-        <Pricing />
-        <Reviews />
-        <FAQ />
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <Portfolio />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <WorkingProcess />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <Pricing />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <Reviews />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div></div>}>
+          <FAQ />
+        </Suspense>
         <Footer />
       </div>
     </div>

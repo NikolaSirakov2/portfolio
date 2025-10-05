@@ -56,7 +56,7 @@ function WorkingProcess() {
         </AnimatedElement>
 
         {/* Process Steps */}
-        <div ref={processRef} className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
+        <div ref={processRef} className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <AnimatedElement
               key={index}
@@ -65,12 +65,9 @@ function WorkingProcess() {
               className="flex-1 max-w-xs"
             >
               <div className="text-center">
-                {/* Step Number and Icon */}
+                {/* Step Icon */}
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto">
-                    {step.number}
-                  </div>
-                  <div className="absolute -top-2 -right-2 text-3xl">
+                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto">
                     {step.icon}
                   </div>
                 </div>
@@ -82,10 +79,13 @@ function WorkingProcess() {
 
               {/* Arrow (except for last step) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2">
-                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                <div className="hidden lg:flex absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-full items-center">
+                  {/* Circular arrow with blue background */}
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center border-2 border-blue-500 shadow-lg hover:scale-110 transition-transform duration-200">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               )}
             </AnimatedElement>

@@ -58,7 +58,7 @@ function FAQ() {
     <section id="faq" className="py-20 bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">Frequently Asked Questions</h2>
+          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Frequently Asked Questions</h2>
           <p className="text-xl text-gray-300">
             Find answers to common questions about my services and development process
           </p>

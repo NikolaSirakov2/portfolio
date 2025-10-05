@@ -75,7 +75,7 @@ function Portfolio() {
     <section id="portfolio" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase">Portfolio</h2>
+          <h2 className="text-5xl font-black text-blue-600 mb-4 tracking-tight font-['Inter',sans-serif] uppercase shadow-blue-500/50 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]">Portfolio</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore my recent projects and see how I've helped businesses achieve their digital goals
           </p>
